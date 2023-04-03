@@ -6,10 +6,10 @@ const typeDefs = gql`
         _id: ID
         username: String
         name: String
-        Price: Float
-        Store: String
-        Persist: Boolean
-        Bought: Boolean
+        price: Float
+        store: String
+        persist: Boolean
+        bought: Boolean
     }
 
     type User {
@@ -26,6 +26,7 @@ const typeDefs = gql`
 
     type Mutation {
         addUser(username: String!, email: String!, password: String!): User
+        addShopList(name: String!, price: Float!, store: String!, persist: Boolean!): ShopList
     }
 `;
 
